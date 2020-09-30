@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Home = () => {
-  return <div>M</div>
+  return <div>symboll lee</div>
 }
 
-export default Home()
+export default Home

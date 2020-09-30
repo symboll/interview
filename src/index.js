@@ -1,7 +1,7 @@
 import express from 'express'
 import React from 'react'
-import { renderToString } from 'react-dom'
-import Home from './serve/Home'
+import { renderToString } from 'react-dom/server'
+import Home from './server/Home'
 const app = express()
 
 app.get('/',function (req, res) {
