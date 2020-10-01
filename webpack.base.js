@@ -1,20 +1,13 @@
 const path = require('path')
-const nodeExternals = require('webpack-node-externals')
+
 module.exports = {
-  mode: 'development',
-  target: 'node',
-  entry: "./src/index.js",
-  output: {
-    filename: '[name].js',
-    path: path.resolve(__dirname, 'build')
-  },
-  externals: [ nodeExternals() ],
   resolve: {
     extensions: ['.js', '.jsx',],
     alias: {
       "@": path.resolve(__dirname, "src")
     }
   },
+  devtool: process.env.NODE_ENV === 'development'? 'inline-source-map': false,
   module: {
     rules: [
       {
