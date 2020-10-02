@@ -1,10 +1,44 @@
-import React from 'react'
+import React, { Component, Fragment } from 'react'
+import { connect } from 'react-redux'
+import Header from '@/common/components/Header'
 
-const Home = () => {
-  return <div>
-    <div>symbollee</div>
-    <button onClick={()=> alert(1123)}>按钮</button>
-  </div>
+import { getHomeList, changeAppName } from './store/action'
+class Home extends Component {
+  render() {
+    const { name, list } = this.props
+    const { changeAppName } = this.props
+    return <Fragment>
+      <Header />
+      <div>hello { name }</div>
+      <button onClick={ changeAppName }>按钮</button>
+      <hr />
+      { list.map(item =><div key={item._id}>{item.title}</div>) }
+    </Fragment>
+  }
+
+  componentDidMount (){
+    if(!this.props.list.length) {
+      this.props.getList()
+    }
+  }
 }
 
-export default Home
+Home.loadData = (store) => {
+  return store.dispatch(getHomeList())
+}
+
+const mapStateToProps = (state) => ({
+  name: state.home.name,
+  list: state.home.list
+})
+const mapDispatchToProps = (dispatch) => ({
+  getList() {
+    dispatch(getHomeList())
+  },
+
+  changeAppName() {
+    dispatch(changeAppName('zhangsan'))
+  }
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home) 

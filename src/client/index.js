@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
-import Routes from '@/Routes'
+import { Provider } from 'react-redux'
+import { BrowserRouter, Route } from 'react-router-dom'
+import routes from '@/routes'
+import { getClientStore } from '../store'
+
 
 const App = ()=> {
   return (
-    <BrowserRouter>
-      { Routes }
-    </BrowserRouter>
+    <Provider store={getClientStore()}>
+      <BrowserRouter>
+        <Fragment>
+          { routes.map(item => <Route key={item.key} {...item}></Route> ) }
+        </Fragment>
+      </BrowserRouter>
+    </Provider>
   )
 }
+
 
 ReactDOM.hydrate(<App />, document.getElementById('root'))
