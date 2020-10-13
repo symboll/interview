@@ -24,7 +24,7 @@ class Home extends Component {
 }
 
 Home.loadData = (store) => {
-  return store.dispatch(getHomeList())
+  return store.dispatch(getHomeList(true))
 }
 
 const mapStateToProps = (state) => ({
@@ -33,7 +33,7 @@ const mapStateToProps = (state) => ({
 })
 const mapDispatchToProps = (dispatch) => ({
   getList() {
-    dispatch(getHomeList())
+    dispatch(getHomeList(false))
   },
 
   changeAppName() {
