@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import Header from '@/common/components/Header'
 
 import { getHomeList, changeAppName } from './store/action'
 class Home extends Component {
@@ -8,7 +7,6 @@ class Home extends Component {
     const { name, list } = this.props
     const { changeAppName } = this.props
     return <Fragment>
-      <Header />
       <div>hello { name }</div>
       <button onClick={ changeAppName }>按钮</button>
       <hr />
@@ -24,7 +22,7 @@ class Home extends Component {
 }
 
 Home.loadData = (store) => {
-  return store.dispatch(getHomeList(true))
+  return store.dispatch(getHomeList())
 }
 
 const mapStateToProps = (state) => ({
@@ -33,7 +31,7 @@ const mapStateToProps = (state) => ({
 })
 const mapDispatchToProps = (dispatch) => ({
   getList() {
-    dispatch(getHomeList(false))
+    dispatch(getHomeList())
   },
 
   changeAppName() {

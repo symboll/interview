@@ -1,4 +1,3 @@
-import { clientAxios, serverAxios } from '@/lib/axios'
 import { CHANGE_APP_NAME, INIT_LIST } from './constant'
 
 const initList = (data) => ({
@@ -6,9 +5,9 @@ const initList = (data) => ({
   data
 })
 
-export const getHomeList = (server) => {
-  const axios = server ? serverAxios : clientAxios
-  return (dispatch) => {
+export const getHomeList = () => {
+
+  return (dispatch, getState, axios) => {
     return axios.get('/courses').then(res => {
       const data = res.data.data
       dispatch(initList(data))
