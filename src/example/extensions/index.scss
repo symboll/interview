@@ -1,0 +1,11 @@
+.wrap {
+  background-color: skyblue;
+  &_frist {
+    color: slateblue;
+  }
+  font: {
+    family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    size: 20px;
+    weight: bold;
+  }
+}

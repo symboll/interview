@@ -1,8 +1,5 @@
-import './index.scss'
-
-const div = document.createElement('div')
-div.className = 'test'
-
-const body = document.getElementById('root')
-
-body.appendChild(div)
+// import './example/extensions/index'
+// import './example/sassScript/index'
+// import './example/control/index'
+// import './example/function/index'
+import './example/mixins/index'
