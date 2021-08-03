@@ -1,0 +1,24 @@
+/**
+* 嵌套
+*/
+
+.nest-a {
+  color: #56789a;
+  .nest-b {
+    background: #eee;
+  }
+  &-c {
+    border: 1px solid #ccc;
+    color: pink;
+    &:hover {
+      color: gold;
+    }
+  }
+  &-d {
+    font: {
+      size: 20px;
+      weight: bold;
+      family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+  }
+}

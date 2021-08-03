@@ -6,7 +6,7 @@ $gutter-width: 10px;
   @return $n * $grid-width + ($n - 1) * $gutter-width
 }
 
-.page-1 {
+.page-6 {
   width: grid-width(5);
   background-color: yellow;
 }
