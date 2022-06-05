@@ -1,9 +1,35 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
 .title {
   color: #123456;
-  font-size: 20px;
+  font-size: 24px;
+  text-align: center;
 }
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  width: 220px;
+  height: 260px;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px 0px #cccccc;
+}
+
 .notes {
-  color: #cccccc;
-  font-size: 12px;
-  margin-top: 10px;
+  color: #56789a;
+  font-size: 18px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 10px;
 }

@@ -7,6 +7,6 @@ $gutter-width: 10px;
 }
 
 .page-6 {
-  width: grid-width(5);
+  width: grid-width(4);   // 4 * 40 + 3 * 10 = 190px
   background-color: yellow;
 }

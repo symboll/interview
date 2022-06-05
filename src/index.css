@@ -1,0 +1,48 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+.title {
+  color: #123456;
+  font-size: 24px;
+  text-align: center;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  width: 220px;
+  height: 260px;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px 0px #cccccc;
+  cursor: pointer;
+}
+
+.scss {
+  background-image: url('./assets/sass.png');
+  background-color: #c69;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.less {
+  background-image: url('./assets/less.png');
+  background-color: #1d365d;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.stylus {
+  background-image: url('./assets/stylus.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

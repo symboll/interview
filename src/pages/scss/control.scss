@@ -14,8 +14,8 @@
   }
 }
 
-@each $li in a,b,c,d {
-  .icon-#{$li} {
+@each $li in a,b,d {
+  .item-#{$li} {
     background-color: #ffeedd;
   }
 }

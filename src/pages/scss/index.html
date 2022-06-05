@@ -7,53 +7,81 @@
   <title>scss</title>
 </head>
 <body>
-  <h3 class="title">Scss</h3>
-
-  <h4 class="notes">// 变量</h4>
-    <div class="variables">variables</div>
-    <div class="var">variables</div>
-   
-  <h4 class="notes">// 嵌套</h4>
-    <div class="nest-a">
-      nest-a
-      <div class="nest-b">nest-b</div>
-      <div class="nest-a-c">nest-a-c</div>
-      <div class="nest-a-d">nest-a-d</div>
+  <div class="title">Scss</div>
+  <div class="content">
+    <div class="card">
+      <div class="notes">variables</div>
+      <div class="variables">font text</div>
+      <div>font text</div>
+    </div>
+    <div class="card">
+      <div class="notes">nesting</div>
+      <div class="nest-a">nest-a
+        <div class="nest-b">nest-b</div>
+        <div class="nest-a-c">nest-a-c</div>
+        <div class="nest-a-d">nest-a-d</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="notes">mixins</div>
+      <div class="page-1">1</div>
+      <div class="page-2">2</div>
+      <div class="page-3">3</div>
+      <div class="page-4">4</div>
+    </div>
+    <div class="card">
+      <div class="notes">extend</div>
+      <div class="message">message</div>
+      <div class="success">success</div>
+      <div class="error">error</div>
+      <div class="warning">warning</div>
+    </div>
+    <div class="card">
+      <div class="notes">control</div>
+      <code>@for $li from 1 to 4</code>
+      <div class="item-1">1</div>
+      <div class="item-2">2</div>
+      <div class="item-3">3</div>
+      <div class="item-4">4</div>
+    </div>
+    <div class="card">
+      <div class="notes">control</div>
+      <code>@for $li from 1 through 4 </code>
+      <div class="items-1">1</div>
+      <div class="items-2">2</div>
+      <div class="items-3">3</div>
+      <div class="items-4">4</div>
+  
+    </div>
+    <div class="card">
+      <div class="notes">control</div>
+      <code>@each $li in a,b,d </code>
+      <div class="item-a">a</div>
+      <div class="item-b">b</div>
+      <div class="item-c">c</div>
+      <div class="item-d">d</div>
     </div>
 
-  <h4 class="notes">// control</h4>
-    <div class="item-1">1</div>
-    <div class="item-2">2</div>
-    <div class="item-3">3</div>
-    <div class="item-4">4</div>
-
-    <div class="items-1">1</div>
-    <div class="items-2">2</div>
-    <div class="items-3">3</div>
-    <div class="items-4">4</div>
-
-    <div class="icon-a">a</div>
-    <div class="icon-b">b</div>
-    <div class="icon-c">c</div>
-    <div class="icon-d">d</div>
-
-    <div class="cur-1">A</div>
-    <div class="cur-2">B</div>
-    <div class="cur-3">C</div>
-    <div class="cur-4">D</div>
-    <div class="cur-5">E</div>
+    <div class="card">
+      <div class="notes">control</div>
+      <code> @while $i > 0 </code>
+      <div class="cur-1">A</div>
+      <div class="cur-2">B</div>
+      <div class="cur-3">C</div>
+      <div class="cur-4">D</div>
+      <div class="cur-5">E</div>
+    </div>
 
 
-  <h4 class="notes">// mixins</h4>
-    <div class="page-1">1</div>
-    <div class="page-2">2</div>
-    <div class="page-3">3</div>
-    <div class="page-4">4</div>
-
-  <h4 class="notes">// function</h4>
-    <div class="page-5">5</div>
-    <div class="page-6">6</div>
-    <div class="page-7">7</div>
-    <div class="page-8">8</div>
+    <div class="card">
+      <div class="notes">function</div>
+      <div class="page-5">5</div>
+      <div class="page-6">6</div>
+      <div class="page-7">7</div>
+      <div class="page-8">8</div>
+    </div>
+    <div class="card"></div>
+    <div class="card"></div>
+  </div>
 </body>
 </html>
