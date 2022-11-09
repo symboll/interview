@@ -1,0 +1,9 @@
+$colors: (light: #ffffff, dark: #000000);
+
+@function theme ($key) {
+  @if not map-has-key($colors, $key) {
+    @warn '在$colors中没有找到 #{$key} 这个key'
+    // @error '在$colors中没有找到 #{$key} 这个key'
+  }
+  @return map-get($map: $colors, $key: $key);
+}

@@ -1,0 +1,43 @@
+
+$success-color: hsl(129, 100%, 50%);
+
+
+@mixin grid ($columns: 12) {
+  @for $li from 1 to $columns {
+    .col-#{$li} {
+      background-color: lighten($color: $success-color, $amount: calc($li/$columns) * 0.5 * 100% );
+    }
+  }
+
+  @for $li from 1 through $columns {
+    .col-#{$li} {
+      width: calc( 100% / $columns ) * $li;
+      border: 1px solid #efefef;
+    }
+  }
+}
+
+
+@mixin icon-list ($types: success error) {
+  @each $type in $types {
+    .icon-#{$type} {
+      background-image: url(../../assets/#{$type}.png);
+
+      width: 32px;
+      height: 32px;
+      background-size: 100% 100%;
+    }
+  }
+}
+
+
+@mixin error ($li: 6) {
+  @while $li > 0 {
+    .item-#{$li} {
+      width: 20px;
+      height: 20px;
+      background-color: transparentize($color: #800, $amount: 1 - calc($li / 10));
+    }
+    $li: $li - 2;
+  }
+}

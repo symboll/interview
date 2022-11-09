@@ -1,0 +1,127 @@
+@import 'variables';
+@import 'mixins';
+@import 'color';
+@import 'control';
+@import 'function';
+
+$name: error;
+$attr: border;
+
+
+.wrap {
+  color: $primary-color-3;
+  .title {
+    font: {
+      size: $primary-size-5x;
+      weight: 500;
+    }
+    &:hover {
+      color: $primary-color;
+      cursor: pointer;
+    }
+  }
+
+  .mixin {
+    @include card($primary-color-3, $primary-color-e);
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .extend {
+    @extend .mixin;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+    margin-top: 20px;
+    %button {
+      border-radius: 4px;
+      padding: 4px 12px;
+      border: none;
+      cursor: pointer;
+    }
+    .primary-btn {
+      @extend %button;
+      background-color: $primary-color-9;
+      color: $primary-color-2;
+    }
+    .success-btn {
+      @extend %button;
+      background-color: $success-color-9;
+      color: $success-color-1;
+    }
+  }
+  
+  .color {
+    @include card($primary-color-3, $primary-color-e);
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 300px;
+    margin-top: 20px;
+    color: #fff;
+    > div {
+      padding: 2px 6px;
+    }
+    > div:nth-child(1) {
+      background-color: $color;
+    }
+    > div:nth-child(2) {
+      background-color: $color-ah;
+    }
+    > div:nth-child(3) {
+      background-color: $color-l1;
+    }
+    > div:nth-child(4) {
+      background-color: $color-d1;
+    }
+    > div:nth-child(5) {
+      background-color: $color-s1;
+    }
+    > div:nth-child(6) {
+      background-color: $color-de1;
+    }
+    > div:nth-child(7) {
+      background-color: $color-o1;
+    }
+    > div:nth-child(8) {
+      background-color: $color-t1;
+    }
+  }
+
+  .message-#{$name} {
+    @include card($primary-color-3, $primary-color-e);
+    margin-top: 20px;
+    #{$attr}: 1px solid $primary-color-9;
+  }
+
+  .row {
+    @include card($primary-color-3, $primary-color-e);
+    @include grid;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  .icon {
+    @include card($primary-color-3, $primary-color-e);
+    @include icon-list;
+    margin-top: 20px;
+  }
+
+  .error {
+    @include card($primary-color-3, $primary-color-e);
+    @include error;
+    margin-top: 20px;
+  }
+
+  .theme-bg {
+    @include card($primary-color-3, $primary-color-e);
+    margin-top: 20px;
+    background-color: theme(dark);
+    // background-color: theme(light);
+    // background-color: theme(grey);
+  }
+}
+
+

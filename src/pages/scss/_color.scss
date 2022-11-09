@@ -1,0 +1,16 @@
+// 色相 0-360 饱和度 0-100% 明度 0-100%
+$color: rgba(163, 144, 129, 0.989);
+
+// 色相值
+$color-ah: adjust-hue($color, 45deg);
+
+// 明度
+$color-l1: lighten($color, 20%);
+$color-d1: darken($color: $color, $amount: 20%);
+
+// 饱和度
+$color-s1: saturate($color, 20%);
+$color-de1: desaturate($color, 20%);
+
+$color-o1: opacify($color, .2);
+$color-t1: transparentize($color, .2);
